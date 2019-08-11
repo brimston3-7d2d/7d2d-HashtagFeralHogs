@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<!-- replace all zombieScreamers -->
+	<remove xpath="/spawning/entityspawner[@name='RoamingHordeSpawnDay']" />
+	<append xpath="/spawning">
+		<entityspawner name="RoamingHordeSpawnDay" dynamic="true" wrapMode="wrap">
+		<day value="*">
+			<property name="EntityGroupName" value="WildHogsHorde" />
+			<property name="Time" value="Any" />
+			<property name="DelayBetweenSpawns" value="1" />
+			<property name="TotalAlive" value="30" />
+			<property name="TotalPerWave" value="5" />
+		</day>
+		</entityspawner>
+	</append>
+	
+	<remove xpath="/spawning/entityspawner[@name='RoamingHordeSpawnNight']" />
+	<append xpath="/spawning">
+		<entityspawner name="RoamingHordeSpawnNight" dynamic="true" wrapMode="wrap">
+		<day value="*">
+			<property name="EntityGroupName" value="WildHogsHorde" />
+			<property name="Time" value="Any" />
+			<property name="DelayBetweenSpawns" value="1" />
+			<property name="TotalAlive" value="30" />
+			<property name="TotalPerWave" value="5" />
+		</day>
+		</entityspawner>
+	</append>
+	
+	<remove xpath="/spawning/entityspawner[@name='HordeMeterDynamicSpawnDay']" />
+	
+	<!-- <set xpath="/spawning/entityspawner[@name='HordeMeterDynamicSpawnDay']/@value">-->
+	<append xpath="/spawning">
+		<entityspawner name="HordeMeterDynamicSpawnDay" dynamic="true" >
+		<day value="*">
+			<property name="EntityGroupName" value="WildHogsHorde" />
+			<property name="Time" value="Any" />
+			<property name="DelayBetweenSpawns" value="1" />
+			<property name="TotalAlive" value="30" />
+		</day>
+		</entityspawner>
+	</append>
+	<!--</set>-->
+	
+	<remove xpath="/spawning/entityspawner[@name='HordeMeterDynamicSpawnNight']" />
+	
+	<!--<set xpath="/spawning/entityspawner[@name='HordeMeterDynamicSpawnNight']/@value">-->
+	<append xpath="/spawning">
+		<entityspawner name="HordeMeterDynamicSpawnNight" dynamic="true">
+		<day value="*">
+			<property name="EntityGroupName" value="WildHogsHorde" />
+			<property name="Time" value="Any" />
+			<property name="DelayBetweenSpawns" value="1" />
+			<property name="TotalAlive" value="30" />
+		</day>
+		</entityspawner>
+	</append>
+	<!--</set>-->
+	
+</config>

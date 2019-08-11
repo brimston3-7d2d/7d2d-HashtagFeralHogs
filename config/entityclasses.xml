@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<!-- Screamer Grace -->
+	<append xpath="/entity_classes">
+		<entity_class name="animalScoutGrace" extends="animalBossGrace">
+			<property name="Tags" value="entity,animal,hostile"/> <!-- Not inherited -->
+		    <!-- Not entirely sure how to get scream to fire, but this is not it. -->
+			<!-- <property name="AvatarController" value="AvatarZombie01Controller"/> -->
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Faction" value="undead"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer,0"/>
+			<property name="AITask-5" value="ApproachSpot"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityPlayer,0,EntityNPC,0"/>
+			<property name="AITarget-4" value=""/>
+			
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperSenseChance" value=".5"/>
+		</entity_class>
+		<entity_class name="animalSmolBoar" extends="animalBoar">
+			<property name="Tags" value="entity,animal,hostile"/> <!-- Not inherited -->
+		    <!-- Not entirely sure how to get scream to fire, but this is not it. -->
+			<!-- <property name="AvatarController" value="AvatarZombie01Controller"/> -->
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Faction" value="undead"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer,0"/>
+			<property name="AITask-5" value="ApproachSpot"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityPlayer,0,EntityNPC,0"/>
+			<property name="AITarget-4" value=""/>
+			
+			<property name="Mass" value="200"/>
+		</entity_class>
+		<entity_class name="animalMediumBoar" extends="animalSmolBoar">
+			<property name="Tags" value="entity,animal,hostile"/> <!-- Not inherited -->
+			<property name="Mass" value="600"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+			</effect_group>
+		</entity_class>
+		<entity_class name="animalChonkyBoar" extends="animalSmolBoar">
+			<property name="Tags" value="entity,animal,hostile"/> <!-- Not inherited -->
+			<property name="Mass" value="900"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+			</effect_group>
+		</entity_class>
+	</append>
+</config>

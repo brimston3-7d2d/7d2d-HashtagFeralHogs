@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<!-- Set all scout spawns to Wild Hawgs -->
+	<set xpath="/gamestages/spawner[@name='ScoutGSList']/gamestage/spawn/@group">WildHogsHorde</set>
+</config>
